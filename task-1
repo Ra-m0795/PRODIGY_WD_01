@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            margin: 0 1rem;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #007BFF;
+        }
+
+        .scrolled {
+            background-color: #007BFF;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .scrolled .menu a {
+            color: white;
+        }
+
+        main {
+            padding-top: 80px;
+        }
+
+        section {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header id="navbar">
+    <nav>
+        <div class="logo">MySite</div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to MySite</h1>
+        <p>Your one-stop solution for web design and development.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a variety of services including web design, development, and SEO.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch for more details about our offerings.</p>
+    </section>
+</main>
+
+<script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
